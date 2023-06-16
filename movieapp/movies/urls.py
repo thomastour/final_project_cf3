@@ -18,5 +18,7 @@ urlpatterns = [
     path("movies/<int:pk>/delete/", views.movie_delete_view, name="movie_delete"),
     # API views
     path("api/movies/", views.MovieList.as_view(), name="api_movie_list"),
-    path("api/movies/<int:pk>/", views.MovieDetail.as_view(), name="api_movie_detail"),
+    path(
+        "api/movies/<int:pk>/", views.MovieDetail.as_view(), name="api_movie_detail"
+    ),  # search movie by id example: http://127.0.0.1:8000/api/movies/2/
 ]

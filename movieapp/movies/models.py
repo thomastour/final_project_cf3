@@ -11,6 +11,7 @@ class CustomUser(AbstractUser):
 
 
 class Movie(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     genre = models.CharField(max_length=100)
     director = models.CharField(max_length=100)
