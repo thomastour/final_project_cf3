@@ -48,7 +48,8 @@ MoviePedia provides the following API endpoints for programmatic access:
 - DELETE /api/movies/{movie_id}/: Delete a specific movie.
 - Please note that authentication is required for certain endpoints.
 
-For detailed information about the API and available request/response formats, refer to the API [Documentation] (src="https://img.shields.io/badge/API%20Documentation-View%20Now-blue?style=for-the-badge&logo=appveyor")
+For detailed information about the API and available request/response formats, refer to the [![API Documentation](https://img.shields.io/badge/API%20Documentation-View%20Now-blue?style=for-the-badge&logo=appveyor)](README.md)
+
 
 **Contributing**
 We welcome contributions from the open-source community to enhance MOVIEPEDIA. If you find any bugs, have feature requests, or want to contribute code, please follow our Contribution Guidelines.
