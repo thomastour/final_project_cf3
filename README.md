@@ -4,10 +4,15 @@
 **MOVIEPEDIA** is a comprehensive movie database and information platform developed using Python and Django. It allows users to explore, search, and contribute to a vast collection of movies. Whether you're a movie enthusiast, a film critic, or simply looking for information about a specific movie, MOVIEPEDIA has you covered.
 
 **Key Features**
--User Registration and Login: Create an account and securely log in to MOVIEPEDIA to unlock additional features and contribute to the platform.
--Movie Management: Contribute to the platform by adding new movies, updating movie descriptions, and deleting movies if necessary.
--Advanced Search: Easily find movies using various search criteria such as actors, genre, directors, or release year.
--Responsive Design: The user interface is built with Bootstrap, ensuring a seamless and visually appealing experience across different devices.
+
+- User Registration and Login: Create an account and securely log in to MOVIEPEDIA to unlock additional features and contribute to the platform.
+
+- Movie Management: Contribute to the platform by adding new movies, updating movie descriptions, and deleting movies if necessary.
+
+- Advanced Search: Easily find movies using various search criteria such as actors, genre, directors, or release year.
+
+- Responsive Design: The user interface is built with Bootstrap, ensuring a seamless and visually appealing experience across different devices.
+
 
 **Technologies Used:**
 ``` 
