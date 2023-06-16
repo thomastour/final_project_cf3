@@ -2,7 +2,7 @@
 ## MOVIEPEDIA
 
 <h2>Home Page</h2>
-  <img src="home.JPG" alt="home page" width="700" height="500">
+  <img src="/moviepedia%20img/home.JPG" alt="home page" width="700" height="500">
 
 **MOVIEPEDIA** is a comprehensive movie database and information platform developed using Python and Django. It allows users to explore, search, and contribute to a vast collection of movies. Whether you're a movie enthusiast, a film critic, or simply looking for information about a specific movie, MOVIEPEDIA has you covered.
 
