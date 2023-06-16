@@ -21,6 +21,5 @@ We welcome contributions from the open-source community to enhance MOVIEPEDIA. I
 **License**
 MOVIEPEDIA is released under the MIT License. You are free to use, modify, and distribute this project as per the terms of the license.
 
-**Support**
-If you have any questions, issues, or need support, please contact at thomastour@outlook.com
+
 

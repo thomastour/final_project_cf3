@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #702CF5; color: white;">
+    <div class="container bg-dark text-white p-4 rounded mt-5">
+        <h1>Movie Detail</h1>
+        <p><strong>Title:</strong> {{ movie.title }}</p>
+        <p><strong>Genre:</strong> {{ movie.genre }}</p>
+        <p><strong>Director:</strong> {{ movie.director }}</p>
+        <p><strong>Release Year:</strong> {{ movie.release_year }}</p>
+        <p><strong>Actor:</strong> {{ movie.actor }}</p>
+        <p><strong>Description:</strong> {{ movie.description }}</p>
+        <a href="{% url 'movie_list' %}" class="btn btn-primary">Back to Movie List</a>
+    </div>
+</body>
+</html>
