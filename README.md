@@ -13,6 +13,7 @@ Responsive Design: The user interface is built with Bootstrap, ensuring a seamle
 ``` 
     Python
     Django
+    SQLite
     HTML
     Bootstrap
 ```
