@@ -10,10 +10,11 @@ Advanced Search: Easily find movies using various search criteria such as actors
 Responsive Design: The user interface is built with Bootstrap, ensuring a seamless and visually appealing experience across different devices.
 
 **Technologies Used:**
-Python: A powerful programming language used for the backend development of MOVIEPEDIA.
-Django: A high-level Python web framework that simplifies the development of robust and scalable web applications.
-HTML: The markup language used for structuring the web pages and content.
-Bootstrap: A popular CSS framework that aids in creating responsive and visually appealing web interfaces.
+```Python
+    Django
+    HTML
+    Bootstrap
+```
 
 **Contributing**
 We welcome contributions from the open-source community to enhance MOVIEPEDIA. If you find any bugs, have feature requests, or want to contribute code, please follow our Contribution Guidelines.
