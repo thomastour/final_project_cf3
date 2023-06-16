@@ -10,7 +10,8 @@ Advanced Search: Easily find movies using various search criteria such as actors
 Responsive Design: The user interface is built with Bootstrap, ensuring a seamless and visually appealing experience across different devices.
 
 **Technologies Used:**
-```Python
+``` 
+    Python
     Django
     HTML
     Bootstrap
