@@ -10,6 +10,7 @@ from .serializers import MovieSerializer
 from rest_framework.views import APIView
 
 
+
 class MovieList(APIView):
     """
     API endpoint to get all movies or create a new movie.
@@ -39,6 +40,7 @@ class MovieDetail(APIView):
     API endpoint to retrieve, update, or delete a specific movie.
     """
 
+
     def get(self, request, pk):
         """
         Retrieve a specific movie by ID.
@@ -51,7 +53,7 @@ class MovieDetail(APIView):
         """
         Update a specific movie by ID.
         """
-        movie = get_object_or_404(Movie, pk=pk)
+        movie = get_object_or_404(Movie, pk=pk) 
         serializer = MovieSerializer(movie, data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -66,6 +68,8 @@ class MovieDetail(APIView):
         self.check_object_permissions(request, movie)
         movie.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
 
 
 def home_view(request):
@@ -80,31 +84,31 @@ def login_view(request):
     Handle user login.
     """
     if request.method == "POST":
-        form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get("username")
-            password = form.cleaned_data.get("password")
-            print(f"Username: {username}, Password: {password}")
+        form = AuthenticationForm(request, data=request.POST) # Create a form instance with the submitted data
+        if form.is_valid(): # Check if the form is valid
+            username = form.cleaned_data.get("username") # Get the username from the form
+            password = form.cleaned_data.get("password") # Get the password from the form
+            print(f"Username: {username}, Password: {password}") 
 
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
+            user = authenticate(request, username=username, password=password) # Authenticate the user
+            if user is not None: # Check if the user was authenticated successfully
                 print("Authentication successful")
                 login(request, user)
                 return redirect("menu")
             else:
                 print("Authentication failed")
-                error_message = "Invalid credentials"
+                error_message = "Authentication failed. Invalid username or password" # If the user was not authenticated successfully, display an error message
                 return render(
                     request,
                     "movies/login.html",
                     {"form": form, "error_message": error_message},
                 )
         else:
-            error_message = "Invalid credentials"
+            error_message = "form is invalid" #refers to errors related to the overall form structure or format, such as missing required fields, incorrect field types
             print("Form is invalid")
             print(form.errors)
     else:
-        form = AuthenticationForm(request)
+        form = AuthenticationForm(request) 
 
     return render(request, "movies/login.html", {"form": form})
 
@@ -214,12 +218,16 @@ def movie_update_view(request, pk):
     return render(request, "movies/movie_update.html", {"form": form, "movie": movie})
 
 
+
+
 def movie_delete_view(request, pk):
     """
     Render the movie delete confirmation page and handle the deletion of a movie.
     """
-    movie = get_object_or_404(Movie, pk=pk)
-    if request.method == "POST":
-        movie.delete()
-        return redirect("movie_list")
+    movie = get_object_or_404(Movie, pk=pk) 
+    if request.method == "POST": # Check if the request method is POST
+        if request.user == movie.user: # Check if the user is the owner of the movie
+            movie.delete() # Delete the movie
+        return redirect("movie_list") 
+    
     return render(request, "movies/movie_delete.html", {"movie": movie})

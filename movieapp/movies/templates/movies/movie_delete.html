@@ -18,12 +18,18 @@
         <p><strong>Description:</strong> {{ movie.description }}</p>
         <form method="post">
             {% csrf_token %}
+            {% if movie.user == request.user %}
             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+            {% endif %}
         </form>
+        
+        {%if movie.user != request.user %}
+        <p>You are not authorized to delete this movie.</p>
+        
+        {% endif %}
         <div class="mt-3">
-        <a href="{% url 'menu' %}" class="btn btn-primary">Back to Menu</a>
-    </div>
-
+            <a href="{% url 'menu' %}" class="btn btn-primary">Back to Menu</a>
+        </div>
     
 </body>
 </html>
