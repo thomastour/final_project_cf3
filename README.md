@@ -58,7 +58,7 @@ We welcome contributions from the open-source community to enhance MOVIEPEDIA. I
 MOVIEPEDIA is released under the MIT License. You are free to use, modify, and distribute this project as per the terms of the license.
 
 <h2>Home Page</h2>
-  <img src="/moviepedia%20img/home.JPG" alt="home page" width="600" height="500">
+  <img src="/moviepedia%20img/home.JPG" alt="home page" width="700" height="700">
 
 <h2>Login Page</h2>
   <img src="/moviepedia%20img/login.JPG" alt="Login page" width="500" height="500">
