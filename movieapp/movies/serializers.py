@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Movie
 from django.contrib.auth import get_user_model
+from .permissions import IsOwnerOrReadOnly
 
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -16,8 +17,12 @@ class MovieSerializer(serializers.ModelSerializer):
             "description",
             "created_at",
             "updated_at",
-            "user",
         ]
+
+        read_only_fields = [
+            "created_at",
+            "updated_at",
+        ]  # Prevents users from updating these fields.
 
 
 class CustomUserSerializer(serializers.ModelSerializer):

@@ -23,8 +23,11 @@
             {% endif %}
         </form>
         
+       
         {%if movie.user != request.user %}
-        <p>You are not authorized to delete this movie.</p>
+        <div class="p-3 text-danger bg-primary-subtle border border-primary-subtle rounded-3">
+        <h4>You are not authorized to delete this movie.</h4>
+        </div>
         
         {% endif %}
         <div class="mt-3">

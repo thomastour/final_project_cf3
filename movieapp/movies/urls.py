@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from movies import views
 from django.contrib.auth.views import LogoutView
+from django.urls import include, path
 
 
 urlpatterns = [
@@ -21,4 +22,7 @@ urlpatterns = [
     path(
         "api/movies/<int:pk>/", views.MovieDetail.as_view(), name="api_movie_detail"
     ),  # search movie by id example: http://127.0.0.1:8000/api/movies/2/
+    path(
+        "api-auth/", include("rest_framework.urls")
+    ),  # Include authentication URLs for the browsable API
 ]

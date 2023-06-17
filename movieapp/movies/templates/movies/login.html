@@ -10,7 +10,7 @@
         <h1 class="mb-4">Login</h1>
 
         {% if error_message %}
-            <p class="text-danger">{{ error_message }}</p>
+        <p class="error">{{ error_message }}</p>
         {% endif %}
         <form method="post" class="login-form">
             {% csrf_token %}
@@ -22,10 +22,13 @@
                 <label for="password" class="form-label">Password:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
+           
             <div class="mb-3">
                 <input type="submit" value="Login" class="btn btn-primary">
             </div>
+            
         </form>
+           
         <p>Don't have an account? <a href="{% url 'register' %}" class="text-white">Create one here</a>.</p>
     </div>
 </body>
