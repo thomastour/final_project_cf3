@@ -58,25 +58,25 @@ We welcome contributions from the open-source community to enhance MOVIEPEDIA. I
 MOVIEPEDIA is released under the MIT License. You are free to use, modify, and distribute this project as per the terms of the license.
 
 <h2>Home Page</h2>
-  <img src="/moviepedia%20img/home.JPG" alt="home page" width="700" height="500">
+  <img src="/moviepedia%20img/home.JPG" alt="home page" width="500" height="500">
 
 <h2>Login Page</h2>
-  <img src="/moviepedia%20img/login.JPG" alt="Login page" width="700" height="500">
+  <img src="/moviepedia%20img/login.JPG" alt="Login page" width="500" height="500">
 
 <h2>Registration Page</h2>
-  <img src="/moviepedia%20img/register.JPG" alt="registration page" width="700" height="500">
+  <img src="/moviepedia%20img/register.JPG" alt="registration page" width="500" height="500">
 
   <h2>Menu</h2>
-  <img src="/moviepedia%20img/menu.JPG" alt="menu page" width="700" height="500">
+  <img src="/moviepedia%20img/menu.JPG" alt="menu page" width="500" height="500">
 
   <h2>Movie List Page</h2>
-  <img src="/moviepedia%20img/movie_list.JPG" alt="movie list" width="700" height="500">
+  <img src="/moviepedia%20img/movie_list.JPG" alt="movie list" width="500" height="500">
 
   <h2>Movie Detail Page</h2>
-  <img src="/moviepedia%20img/movie_detail.JPG" alt="movie detail page" width="700" height="500">
+  <img src="/moviepedia%20img/movie_detail.JPG" alt="movie detail page" width="500" height="500">
 
   <h2>Movie Edit/Update Page</h2>
-  <img src="/moviepedia%20img/update_edit.JPG" alt="update_edit page" width="700" height="500">
+  <img src="/moviepedia%20img/update_edit.JPG" alt="update_edit page" width="500" height="500">
 
   <h2>Delete Page</h2>
-  <img src="/moviepedia%20img/delete.JPG" alt="delete page" width="700" height="500">
+  <img src="/moviepedia%20img/delete.JPG" alt="delete page" width="500" height="500">
