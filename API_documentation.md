@@ -1,6 +1,9 @@
 **API Documentation**
+
 Movie List [/api/movies/]
+
 Retrieve All Movies [GET]
+
 Retrieves a list of all movies.
 Response 200 (application/json)
 
