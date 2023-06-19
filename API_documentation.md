@@ -23,7 +23,7 @@ Creates a new movie.
 
 Request (application/json)
 
-````
+```
 {
 "title": "Pumping Iron",
 "genre": "Documentary",
