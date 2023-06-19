@@ -120,5 +120,17 @@ Parameters
 id (number) - ID of the Movie
 Response 204 (No Content)
 
-Note: Replace {id} in the URL with the actual ID of the movie you want to retrieve, update, or delete.
+Note: Replace {id} in the URL with the actual ID of the movie you want to delete.
+
+Example Request:
+
+```
+DELETE /api/movies/{id}/
+```
+Example Response:
+
+```
+HTTP/1.1 204 No Content
+```
+Response 204 (No Content) indicates that the request was successful and the movie with the specified ID has been deleted from the database.
 
