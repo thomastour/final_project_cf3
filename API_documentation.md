@@ -1,6 +1,9 @@
 **API Documentation**
+
 Movie List [/api/movies/]
+
 Retrieve All Movies [GET]
+
 Retrieves a list of all movies.
 Response 200 (application/json)
 
@@ -23,7 +26,7 @@ Creates a new movie.
 
 Request (application/json)
 
-````
+```
 {
 "title": "Pumping Iron",
 "genre": "Documentary",
@@ -33,8 +36,8 @@ Request (application/json)
 "description": "Arnold Schwarzenegger and Lou Ferrigno face off in a no-holds-barred competition for the title of Mr. Olympia in this critically-acclaimed film that made Schwarzenegger a household name."
 }
 ```
-Response 201 (application/json)
 
+Response 201 (application/json)
 
 ```
 {
@@ -72,8 +75,9 @@ Response 200 (application/json)
 "created_at": "2023-06-16T12:18:20.489815Z",
 "updated_at": "2023-06-16T12:30:46.794674Z"
 }
-
 ```
+
+
 Update a Specific Movie [PUT]
 Updates a specific movie by its ID.
 
@@ -81,6 +85,7 @@ Parameters
 
 id (number) - ID of the Movie
 Request (application/json)
+
 
 ```
 {
@@ -92,7 +97,9 @@ Request (application/json)
 "description": "Updated Description"
 }
 ```
+
 Response 200 (application/json)
+
 
 ```
 {
@@ -106,8 +113,8 @@ Response 200 (application/json)
 "created_at": "2023-06-16T12:18:20.489815Z",
 "updated_at": "2023-06-16T12:30:46.794674Z"
 }
-
 ```
+
 Delete a Specific Movie [DELETE]
 Deletes a specific movie by its ID.
 
@@ -116,6 +123,17 @@ Parameters
 id (number) - ID of the Movie
 Response 204 (No Content)
 
-Note: Replace {id} in the URL with the actual ID of the movie you want to retrieve, update, or delete.
+Note: Replace {id} in the URL with the actual ID of the movie you want to delete.
+
+Example Request:
+
 ```
-````
+DELETE /api/movies/{id}/
+```
+Example Response:
+
+```
+HTTP/1.1 204 No Content
+```
+Response 204 (No Content) indicates that the request was successful and the movie with the specified ID has been deleted from the database.
+
