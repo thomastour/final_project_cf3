@@ -7,6 +7,8 @@ from django.contrib.auth import get_user_model
 
 # The ModelSerializer class provides a shortcut that lets you automatically create a Serializer class with fields that correspond to the Model fields.
 class MovieSerializer(serializers.ModelSerializer):
+
+    user =serializers.StringRelatedField(read_only=True) #to display username instead of id
     class Meta:
         model = Movie
         fields = [
@@ -19,6 +21,7 @@ class MovieSerializer(serializers.ModelSerializer):
             "description",
             "created_at",
             "updated_at",
+            "user",
             
         ]
     
