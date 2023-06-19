@@ -29,13 +29,12 @@ To get started with MOVIEPEDIA, follow these steps:
 - Clone the MOVIEPEDIA repository to your local machine.
 
 ```
-git clone https://github.com/your-username/MOVIEPEDIA.git
+git clone https://github.com/your-username/final_project_cf3.git
 ```
 
 - Install the required Python dependencies using pip.
 
 ```
-cd MOVIEPEDIA
 pip install -r requirements.txt
 ```
 
