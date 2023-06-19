@@ -21,7 +21,7 @@ class MovieList(APIView):
         Retrieve all movies.
         """
         movies = Movie.objects.all()
-        serializer = MovieSerializer(movies, many=True)
+        serializer = MovieSerializer(movies, many=True) 
         return Response(serializer.data)
 
     def post(self, request):
@@ -30,7 +30,8 @@ class MovieList(APIView):
         """
         serializer = MovieSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            user = request.user # The user is automatically assigned to the request by the SessionAuthentication class.
+            serializer.save(user=user) # Assign the user to the movie.
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -69,6 +70,7 @@ class MovieDetail(APIView):
         self.check_object_permissions(request, movie)
         movie.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
 
 
 def home_view(request):
