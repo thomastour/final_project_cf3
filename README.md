@@ -27,14 +27,28 @@
 To get started with MOVIEPEDIA, follow these steps:
 
 - Clone the MOVIEPEDIA repository to your local machine.
-  
+  ```
+  git clone https://github.com/your-username/MOVIEPEDIA.git
+```
 - Install the required Python dependencies using pip.
-  
-- Set up the database and apply migrations.
 
+```
+cd MOVIEPEDIA
+pip install -r requirements.txt
+```
+- Set up the database and apply migrations.
+```
+python manage.py migrate
+```
 - Start the Django development server.
+```
+python manage.py runserver
+```
   
 - Access MOVIEPEDIA through your preferred web browser.
+```
+http://localhost:8000/
+```
 
 - Register an account or log in to begin exploring, contributing, and searching for movies.
 
