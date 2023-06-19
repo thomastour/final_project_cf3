@@ -1,9 +1,11 @@
+import datetime
 from rest_framework import serializers
 from .models import Movie
 from django.contrib.auth import get_user_model
-from .permissions import IsOwnerOrReadOnly
+#from .permissions import IsOwnerOrReadOnly
+#from .models import  CustomUser
 
-
+# The ModelSerializer class provides a shortcut that lets you automatically create a Serializer class with fields that correspond to the Model fields.
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
@@ -17,13 +19,21 @@ class MovieSerializer(serializers.ModelSerializer):
             "description",
             "created_at",
             "updated_at",
+            
         ]
-
+    
         read_only_fields = [
             "created_at",
             "updated_at",
         ]  # Prevents users from updating these fields.
 
+def validate_release_year(value):
+    """
+    Check that the release year is not in the future.
+    """
+    if value > datetime.datetime.now().year:
+        raise serializers.ValidationError("The release year cannot be in the future.")
+    return value
 
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
