@@ -4,6 +4,7 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body style="background-color: #702CF5; color: white;">
     <div class="container bg-dark text-white p-4 rounded mt-5">
         <h1>Welcome to the MoviePedia a community-driven platform</h1>
@@ -18,9 +19,9 @@
         <p>Click on the link below to get started.</p>
         <a href="{% url 'login' %}" class="btn btn-outline-primary">Continue</a>
     </div>
-
+    {% load static %}
     <div class="text-center">
-        <img src="static/movies/img/MOVIEPEDIA.jpg" class="img-fluid p-8 mt-4 mx-auto" alt="moviepedia">
+        <img src="{% static 'movies/img/MOVIEPEDIA.jpg' %}" class="img-fluid p-8 mt-4 mx-auto" alt="moviepedia">
     </div>
     
 </body>

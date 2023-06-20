@@ -7,32 +7,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background-color: #702CF5; color: white;">
-    <div class="container bg-dark text-white  p-4 rounded mt-5 col-md-4 offset-md-4">
-        <h2>Delete Movie</h2>
-        <h4>Are you sure you want to delete the following movie?</h4>
-        <p><strong>Title:</strong> {{ movie.title }}</p>
-        <p><strong>Genre:</strong> {{ movie.genre }}</p>
-        <p><strong>Director:</strong> {{ movie.director }}</p>
-        <p><strong>Release Year:</strong> {{ movie.release_year }}</p>
-        <p><strong>Actor:</strong> {{ movie.actor }}</p>
-        <p><strong>Description:</strong> {{ movie.description }}</p>
-        <form method="post">
-            {% csrf_token %}
-            {% if movie.user == request.user %}
-            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-            {% endif %}
-        </form>
-        
-       
-        {%if movie.user != request.user %}
-        <div class="p-3 text-danger bg-primary-subtle border border-primary-subtle rounded-3">
-        <h4>You are not authorized to delete this movie.</h4>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="bg-dark text-white p-4 rounded mt-5">
+                    <h2>Delete Movie</h2>
+                    <h4>Are you sure you want to delete the following movie?</h4>
+                    <p><strong>Title:</strong> {{ movie.title }}</p>
+                    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+                    <p><strong>Director:</strong> {{ movie.director }}</p>
+                    <p><strong>Release Year:</strong> {{ movie.release_year }}</p>
+                    <p><strong>Actor:</strong> {{ movie.actor }}</p>
+                    <p><strong>Description:</strong> {{ movie.description }}</p>
+                    <form method="post">
+                        {% csrf_token %}
+                        {% if movie.user == request.user %}
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        {% endif %}
+                    </form>
+                    {% if movie.user != request.user %}
+                        <div class="p-3 text-danger bg-primary-subtle border border-primary-subtle rounded-3">
+                            <h4>You are not authorized to delete this movie.</h4>
+                        </div>
+                    {% endif %}
+                    <div class="mt-3">
+                        <a href="{% url 'menu' %}" class="btn btn-primary">Back to Menu</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        {% endif %}
-        <div class="mt-3">
-            <a href="{% url 'menu' %}" class="btn btn-primary">Back to Menu</a>
-        </div>
-    
+    </div>
 </body>
 </html>
