@@ -1,17 +1,18 @@
 from django import forms
-from .models import Movie
-from movies.models import CustomUser
+from django.contrib.auth.forms import UserCreationForm
+
+from .models import CustomUser, Movie
 
 
 class MovieForm(forms.ModelForm):
     class Meta:
         model = Movie
-        fields = "__all__"
+        fields = ["title", "genre", "director", "release_year", "actor", "description"]
 
 
-class CustomUserCreationForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
+class CustomUserCreationForm(UserCreationForm):
+    email = forms.EmailField(required=True)
 
-    class Meta:
+    class Meta(UserCreationForm.Meta):
         model = CustomUser
-        fields = ["username", "email", "password"]
+        fields = ["username", "email", "password1", "password2"]
